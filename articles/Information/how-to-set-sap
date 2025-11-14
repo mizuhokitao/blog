@@ -1,0 +1,191 @@
+私たちテクニカルサポートでは、お客様の迅速な問題解決に繋がるよう日々尽力しています。
+他方で、SQL Server には似た名称の関連製品が複数存在するため、誤って別の製品が選択された状態でお問い合わせが作成されてしまうケースが見受けられます。
+ユーザー目線から見た、関連製品との混同のしやすさも理解していますので、本記事でサポートリクエスト作成時の紛らわしさを少しでも解消できれば幸いです。
+
+
+<目次>
+1. 製品カテゴリの正確な指定のお願い
+2. Azure リソース と紐付けたお問い合わせのお願い (Azure 関連製品の場合)
+3. SQL Server 関連製品
+4. 他社クラウドの SQL Server 関連製品について
+
+
+1. 製品カテゴリの正確な指定のお願い
+SQL Server の関連製品は複数存在しますが、弊社ではそれぞれを別製品扱いとしています。
+各製品で保有する機能や調査手法が異なるため、専門的なご支援ができるよう、Microsoft テクニカルサポートでは製品毎にサポートチームが分かれています。
+
+そのため、サポートリクエストを作成した際に正確な製品が指定されていない場合、受付後にサポート担当者からお客様へのヒアリングを行います。
+そこで、他製品である事が判明した場合、担当者を該当製品チームへ変更する調整が発生するため、調査の着手までに通常よりも時間がかかってしまいます。
+また、担当者変更後に該当の製品観点で再度ヒアリングが必要となり、お客様の負担が余分に発生してしまうケースもあります。
+
+弊社としても、お客様に余分な負担をかける事は避けたく、迅速にサポートしていきたいと考えているため、サポートリクエスト作成の際は、できるかぎり正確に製品カテゴリを指定してください。
+
+
+2. Azure リソース と紐付けたお問い合わせのお願い (Azure 関連製品の場合)
+「Azure SQL」と総称されるAzure SQL Database、 Azure SQL Managed Instance、 SQL Server on Azure VM では、テクニカルサポートでサポートリクエストを受け付けた後、弊社データセンター側から対象環境を確認しながら調査を進める流れとなります。
+// Azure SQL とは - Azure SQL | Microsoft Learn
+
+作成されたサポートリクエストが、対象環境が存在する Azure サブスクリプション ID に紐づいていない場合、データセンター側からリソースを確認する事ができません。
+そのため、Azure Portal で該当のリソースを選択した上でサポートリクエストを作成してください。
+具体的な手順は下記サポートブログ内の「対象リソースの画面よりサポートリクエストを作成する（推奨）」を参照してください。
+// お問い合わせの発行方法について | Japan Azure IaaS Core Support Blog
+
+Azure SQL Database や Azure SQL Managed Instance については、必要に応じて下記の関連記事もご覧ください。
+// Azure SQL Database / SQL Managed Instance のお問い合わせを起票いただく際に | Japan SQL Cloud Support Blog
+
+
+3. SQL Server 関連製品
+SQL Server 関連製品には下記が挙げられます。
+・SQL Server (SQL Server on Azure VM / オンプレミス等 Azure 以外の SQL Server)
+・SQL Server Integration Services (SSIS) 
+・SQL Server Analysis Services (SSAS)
+・SQL Server Reporting Services (SSRS)
+・Azure SQL Database
+・Azure SQL Managed Instance
+
+
+各製品について簡単にご説明します。
+Azure 関連製品の場合は Azure Portal 上でのサポートリクエスト起票画面についてもご説明します。
+
+A. SQL Server
+SQL Server は、マシンのOS上にインストールして使用する製品です。製品の概要は下記公開情報にまとめられています。
+// SQL Server とは - SQL Server | Microsoft Learn
+なお、弊社では環境に応じた専門的なご支援ができるように、Azure VM のSQL Server と、オンプレミス等 Azure 以外の SQL Server でサポートチームが分かれています。
+
+(a) SQL Server on Azure VM
+SQL Server を Azure VM の OS 上にインストールして、 IaaS で使用する形態です。
+「Azure SQL Server」「SQL VM」「SQL 仮想マシン」等と呼ぶ事もあります。
+製品の概要は下記公開情報を参照してください。
+// Azure Windows Virtual Machines 上の SQL Server の概要 - SQL Server on Azure VMs | Microsoft Learn
+
+<Azure Portal 上でのサポートリクエスト起票画面>
+前述の「2. Azure リソース と紐付けたお問い合わせ方法 (Azure 関連製品の場合)」に沿ってお問い合わせを作成してください。
+なお、サポートリクエストの作成画面では、下記のように選択してください。
+・サービスの種類: 「SQL Server in VM - Windows」
+・リソース: 問い合わせ対象の具体的なリソース名
+// 画面例
+
+
+
+※ご参考:
+Azure Portal の「Azure SQL」画面の左メニューで「SQL virtual machines」を選択した際に表示されるリソースは、SQL Server on Azure VM です。
+// 画面例
+
+
+
+SQL 仮想マシン リソース画面では、左上に「SQL 仮想マシン」と表示されます。
+// 画面例
+
+
+
+
+もしも、SQL IaaS Agent 拡張機能に登録していない等により、SQL 仮想マシン リソースが作成されていない場合でも、SQL Server がインストールされている Azure VM のリソース画面にはアクセスできます。
+この画面では、左上に「仮想マシン」と表示されます。
+// 画面例
+
+
+
+
+
+
+(b) オンプレミス等 Azure 以外の SQL Server 
+オンプレミス環境等、Azure 上ではないマシン上にインストールされている SQL Server についても、弊社ではサポートしています。
+
+
+
+B. SQL Server Integration Services (SSIS)、 SQL Server Analysis Services (SSAS)、 SQL Server Reporting Services (SSRS) 
+SQL Server のデータベースエンジンではない、SQL Server Integration Services (SSIS) や SQL Server Analysis Services (SSAS)、 SQL Server Reporting Services (SSRS) は、名前に「SQL Server」が含まれていますが、それぞれ担当チームが異なるため、可能な限り適切な製品カテゴリを指定してください。
+それぞれの製品の概要は下記公開情報にまとめられています。
+・SSIS
+// SQL Server Integration Services - SQL Server Integration Services (SSIS) | Microsoft Learn
+・SSAS
+// SQL Server Analysis Services の概要 | Microsoft Learn
+・SSRS
+// SQL Server Reporting Services とは - SQL Server Reporting Services (SSRS) | Microsoft Learn
+
+
+C. Azure SQL Database
+Azure 上で PaaS として提供されている製品です。「SQL DB」とも呼ばれます。
+前述の「2. Azure リソース と紐付けたお問い合わせ方法 (Azure 関連製品の場合)」に沿ってお問い合わせを作成してください。
+製品の概要は下記公開情報にまとめられています。
+// Azure SQL Database サービスとは - Azure SQL Database | Microsoft Learn
+
+
+<Azure Portal 上でのサポートリクエスト起票画面>
+前述の「2. Azure リソース と紐付けたお問い合わせ方法 (Azure 関連製品の場合)」に沿ってお問い合わせを作成してください。
+なお、サポートリクエストの作成画面では、下記のように選択してください。
+・サービスの種類: 「SQL Database」
+・リソース: 問い合わせ対象の具体的なリソース名
+// 画面例
+
+
+※ご参考:
+Azure Portal の「Azure SQL」画面の左メニューで「SQL Databases」を選択した際に表示されるリソースは、PaaS の SQL Database です。
+// 画面例
+
+
+
+SQL Database のリソース画面では、画面左上に「SQL データベース」と表示されます。
+// 画面例
+
+
+
+または、下図のような画面では、左上に「SQL サーバー」と表示されます。
+「サーバー名」の欄で「<任意のサーバー名>.database.windows.net」と表示されている事でも SQL Database と判断できます。
+(ここでの「SQL サーバー」は、前述のオンプレミスや Azure VM 上にインストールされている製品である 「SQL Server」 を指しているわけではなく、PaaS の複数の SQL Database を束ねる論理的なリソースを指しており、この SQL サーバーに関しても SQL Database チームにてご支援しております。)
+
+// 画面例
+
+
+
+※ SSMS (SQL Server Management Studio) から接続した場合、SQL Database では「<任意のサーバー名>.database.windows.net」と表示されます。
+// 画面例
+
+
+
+D. Azure SQL Managed Instance
+Azure 上で PaaS として提供されている製品です。「SQL MI」とも呼ばれます。
+前述の「2. Azure リソース と紐付けたお問い合わせ方法 (Azure 関連製品の場合)」に沿ってお問い合わせを作成してください。
+製品の概要は下記公開情報にまとめられています。
+// Azure SQL Managed Instance とは - Azure SQL Managed Instance | Microsoft Learn
+
+
+<Azure Portal 上でのサポートリクエスト起票画面>
+前述の「2. Azure リソース と紐付けたお問い合わせ方法 (Azure 関連製品の場合)」に沿ってお問い合わせを作成してください。
+なお、サポートリクエストの作成画面では、下記のように選択してください。
+・サービスの種類: 「SQL Managed Instance」
+・リソース: 問い合わせ対象の具体的なリソース名
+// 画面例
+
+
+※ご参考
+Azure Portal の「Azure SQL」画面の左メニューで「SQL managed instances」を選択した際に表示されるリソースは、SQL Managed Instance と判断できます。
+// 画面例
+
+
+
+SQL Managed Instance のリソース画面では、画面左上に「SQL マネージド インスタンス」と表示されます。
+ホスト名に「<任意のインスタンス名>.*********.database.windows.net」と表示される事でも SQL Managed Instance と判断できます。
+// 画面例
+
+
+
+※ SSMS から接続した場合、SQL Managed Instance では「<任意のインスタンス名>.*********.database.windows.net」や「<任意のインスタンス名>.public.*********.database.windows.net」と表示されます。
+// 画面例
+
+
+
+4. 他社クラウドの SQL Server 関連製品について
+Amazon RDS for SQL Server など、他社クラウドの PaaS 製品は Microsoft テクニカルサポートの対象外です。
+また、他社クラウド上で IaaS として SQL Server をご利用の場合、クラウド基盤に関するトラブルシューティングは、まずはクラウドベンダーにお問い合わせください。
+// SQL Server のサポート ポリシー - SQL Server | Microsoft Learn
+-------- 抜粋
+SQL Server ベースの PaaS および IaaS クラウド ベンダーからサポートを受ける
+発生する技術的な問題がサードパーティのクラウド サービスとしてのプラットフォーム (PaaS) またはサービスとしてのインフラストラクチャ (IaaS) オファリングに存在する場合は、ソリューション ベンダーと直接協力して問題のトラブルシューティングを行ってください。 例えば次が挙げられます。
+・Amazon RDS (アマゾン ウェブ サービス))
+・Microsoft SQL Server on AWS (アマゾン ウェブ サービス)) 詳細については、「Microsoft FAQ – アマゾン ウェブ サービス (AWS)」を参照してください。
+・クラウド SQL: PostgreSQL、MySQL、SQL Server 用 (Google Cloud) 詳細については、「Google Cloud - Getting Support and Google Cloud - Sql Server Troubleshooting」を参照してください。
+--------
+
+
+※本情報の内容（添付文書、添付画像、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。
